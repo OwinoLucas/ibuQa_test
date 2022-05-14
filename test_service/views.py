@@ -6,6 +6,7 @@ from django.contrib.messages import constants as messages
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, Http404, HttpResponseNotAllowed
 from .forms import *
 from .models import *
+from .urls import *
 
 # Create your views here.
 def home(request):
