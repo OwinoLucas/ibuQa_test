@@ -12,12 +12,14 @@ from django.contrib.auth.hashers import make_password,check_password
 from rest_framework import generics
 from django.contrib.auth import authenticate
 from django.contrib.messages import constants as messages
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, Http404, HttpResponseNotAllowed
 from .models import *
 from .urls import *
 from .serializers import  *
 
 # Create your views here.
+#@csrf_exempt 
 class CreateUserAPIView(APIView):
     permission_classes = (AllowAny,)
 

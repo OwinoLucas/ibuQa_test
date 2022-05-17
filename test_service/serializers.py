@@ -1,7 +1,7 @@
 from rest_framework import serializers,status
 from test_service.models import *
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth import User
+from django.contrib.auth.models import User
 
 
 class CustomerSerializer(serializers.ModelSerializer):
