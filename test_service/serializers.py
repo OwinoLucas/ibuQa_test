@@ -1,11 +1,12 @@
 from rest_framework import serializers,status
 from test_service.models import *
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth import User
 
 
 class CustomerSerializer(serializers.ModelSerializer):
  
-    date_joined = serializers.ReadOnlyField()
+    date_joined = serializers.ReadOnlyField()# do i really need this?
  
     class Meta(object):
         model = User #import built in django user
